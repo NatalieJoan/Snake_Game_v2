@@ -1,0 +1,11 @@
+D:\folders\Snake_Game_v2\Snake_Game_v2\bin\Debug\Snake_Game_v2.exe.config
+D:\folders\Snake_Game_v2\Snake_Game_v2\bin\Debug\Snake_Game_v2.exe
+D:\folders\Snake_Game_v2\Snake_Game_v2\bin\Debug\Snake_Game_v2.pdb
+D:\folders\Snake_Game_v2\Snake_Game_v2\obj\Debug\Snake_Game_v2.csproj.AssemblyReference.cache
+D:\folders\Snake_Game_v2\Snake_Game_v2\obj\Debug\Snake_Game_v2.csproj.SuggestedBindingRedirects.cache
+D:\folders\Snake_Game_v2\Snake_Game_v2\obj\Debug\Snake_Game_v2.Form1.resources
+D:\folders\Snake_Game_v2\Snake_Game_v2\obj\Debug\Snake_Game_v2.Properties.Resources.resources
+D:\folders\Snake_Game_v2\Snake_Game_v2\obj\Debug\Snake_Game_v2.csproj.GenerateResource.cache
+D:\folders\Snake_Game_v2\Snake_Game_v2\obj\Debug\Snake_Game_v2.csproj.CoreCompileInputs.cache
+D:\folders\Snake_Game_v2\Snake_Game_v2\obj\Debug\Snake_Game_v2.exe
+D:\folders\Snake_Game_v2\Snake_Game_v2\obj\Debug\Snake_Game_v2.pdb
