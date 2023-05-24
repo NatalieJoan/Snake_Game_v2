@@ -66,13 +66,13 @@ namespace Snake_Game_v2
             {
                 if (i == 0)
                 {
-                    snakeColor = Brushes.Black;
+                    snakeColor = Brushes.DarkGreen;
                 }
                 else
                 {
-                    snakeColor = Brushes.DarkGreen;
+                    snakeColor = Brushes.ForestGreen;
                 }
-                canvas.FillEllipse(snakeColor, new Rectangle
+                canvas.FillRectangle(snakeColor, new Rectangle
                 (
                     Snake[i].X * Settings.Width,
                     Snake[i].Y * Settings.Height,
