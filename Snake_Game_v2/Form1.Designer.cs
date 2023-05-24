@@ -40,7 +40,8 @@
             // 
             // box
             // 
-            this.box.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.box.BackColor = System.Drawing.Color.PapayaWhip;
+            this.box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.box.Location = new System.Drawing.Point(14, 111);
             this.box.Name = "box";
             this.box.Size = new System.Drawing.Size(1096, 534);
@@ -50,10 +51,11 @@
             // 
             // startButton
             // 
-            this.startButton.BackColor = System.Drawing.Color.Orchid;
+            this.startButton.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.startButton.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startButton.Location = new System.Drawing.Point(14, 12);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(132, 56);
+            this.startButton.Size = new System.Drawing.Size(141, 60);
             this.startButton.TabIndex = 1;
             this.startButton.Text = "START";
             this.startButton.UseVisualStyleBackColor = false;
@@ -61,10 +63,11 @@
             // 
             // snapButton
             // 
-            this.snapButton.BackColor = System.Drawing.Color.Orchid;
-            this.snapButton.Location = new System.Drawing.Point(152, 12);
+            this.snapButton.BackColor = System.Drawing.Color.Pink;
+            this.snapButton.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.snapButton.Location = new System.Drawing.Point(161, 14);
             this.snapButton.Name = "snapButton";
-            this.snapButton.Size = new System.Drawing.Size(132, 56);
+            this.snapButton.Size = new System.Drawing.Size(141, 58);
             this.snapButton.TabIndex = 1;
             this.snapButton.Text = "SNAP";
             this.snapButton.UseVisualStyleBackColor = false;
@@ -73,23 +76,26 @@
             // scoreLabel
             // 
             this.scoreLabel.AutoSize = true;
-            this.scoreLabel.Location = new System.Drawing.Point(824, 52);
+            this.scoreLabel.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLabel.Location = new System.Drawing.Point(963, 12);
             this.scoreLabel.Name = "scoreLabel";
-            this.scoreLabel.Size = new System.Drawing.Size(68, 20);
+            this.scoreLabel.Size = new System.Drawing.Size(89, 27);
             this.scoreLabel.TabIndex = 2;
             this.scoreLabel.Text = "Score: 0";
             // 
             // highScoreLabel
             // 
             this.highScoreLabel.AutoSize = true;
-            this.highScoreLabel.Location = new System.Drawing.Point(948, 52);
+            this.highScoreLabel.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.highScoreLabel.Location = new System.Drawing.Point(963, 54);
             this.highScoreLabel.Name = "highScoreLabel";
-            this.highScoreLabel.Size = new System.Drawing.Size(61, 20);
+            this.highScoreLabel.Size = new System.Drawing.Size(80, 27);
             this.highScoreLabel.TabIndex = 2;
             this.highScoreLabel.Text = "Record";
             // 
             // gameTimer
             // 
+            this.gameTimer.Interval = 50;
             this.gameTimer.Tick += new System.EventHandler(this.GameTimer);
             // 
             // Form1

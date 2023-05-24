@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
 
@@ -259,7 +254,7 @@ namespace Snake_Game_v2
             if (scoreGame > highScore)
             {
                 highScore = scoreGame;
-                highScoreLabel.Text = "High Score: " + Environment.NewLine + highScore;
+                highScoreLabel.Text = "Record: " + Environment.NewLine + highScore;
                 highScoreLabel.ForeColor = Color.Maroon;
                 highScoreLabel.TextAlign = ContentAlignment.MiddleCenter;
             }
