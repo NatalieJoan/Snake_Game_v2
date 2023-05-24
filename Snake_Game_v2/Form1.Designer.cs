@@ -77,7 +77,7 @@
             // 
             this.scoreLabel.AutoSize = true;
             this.scoreLabel.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoreLabel.Location = new System.Drawing.Point(963, 12);
+            this.scoreLabel.Location = new System.Drawing.Point(963, 14);
             this.scoreLabel.Name = "scoreLabel";
             this.scoreLabel.Size = new System.Drawing.Size(89, 27);
             this.scoreLabel.TabIndex = 2;
@@ -87,7 +87,7 @@
             // 
             this.highScoreLabel.AutoSize = true;
             this.highScoreLabel.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.highScoreLabel.Location = new System.Drawing.Point(963, 54);
+            this.highScoreLabel.Location = new System.Drawing.Point(963, 59);
             this.highScoreLabel.Name = "highScoreLabel";
             this.highScoreLabel.Size = new System.Drawing.Size(103, 27);
             this.highScoreLabel.TabIndex = 2;
