@@ -17,6 +17,8 @@ namespace Snake_Game_v2
         int scoreGame;
         int highScore;
 
+        private int currentInterval = 100;
+
         Random rand = new Random();
         bool goLeft, goRight, goUp, goDown;
         public Form1()
@@ -169,6 +171,12 @@ namespace Snake_Game_v2
                             Snake[i].Y++;
                             break;
                     }
+                    // nastepuje koniec gry po zderzeniu sie weza ze sciana
+                    if (Snake[0].X < 0 || Snake[0].X > maxWidth || Snake[0].Y < 0 || Snake[0].Y > maxHeight)
+                    {
+                        GameOver();
+                        return;
+                    }
 
                     if (Snake[i].X < 0)
                     {
@@ -190,6 +198,7 @@ namespace Snake_Game_v2
                     if (Snake[i].X == food.X && Snake[i].Y == food.Y)
                     {
                         EatFood();
+                        
                     }
                     for (int j = 1; j < Snake.Count; j++)
                     {
@@ -244,6 +253,15 @@ namespace Snake_Game_v2
 
             Snake.Add(body);
             food = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
+
+            // proces przyspieszenia weza po kazdym kolejnym jedzeniu
+            currentInterval -= 5;
+
+            if (currentInterval < 40)
+            {
+                currentInterval = 40;
+            }
+            gameTimer.Interval = currentInterval;
         }
         private void GameOver()
         {
@@ -254,8 +272,9 @@ namespace Snake_Game_v2
             if (scoreGame > highScore)
             {
                 highScore = scoreGame;
-                highScoreLabel.Text = "Record: " + Environment.NewLine + highScore;
+                highScoreLabel.Text = "Record: " + highScore;
                 highScoreLabel.ForeColor = Color.Maroon;
+                highScoreLabel.Font = new Font(highScoreLabel.Font, FontStyle.Bold);
                 highScoreLabel.TextAlign = ContentAlignment.MiddleCenter;
             }
         }

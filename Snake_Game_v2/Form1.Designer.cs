@@ -89,13 +89,12 @@
             this.highScoreLabel.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.highScoreLabel.Location = new System.Drawing.Point(963, 54);
             this.highScoreLabel.Name = "highScoreLabel";
-            this.highScoreLabel.Size = new System.Drawing.Size(80, 27);
+            this.highScoreLabel.Size = new System.Drawing.Size(103, 27);
             this.highScoreLabel.TabIndex = 2;
-            this.highScoreLabel.Text = "Record";
+            this.highScoreLabel.Text = "Record: 0";
             // 
             // gameTimer
             // 
-            this.gameTimer.Interval = 50;
             this.gameTimer.Tick += new System.EventHandler(this.GameTimer);
             // 
             // Form1
