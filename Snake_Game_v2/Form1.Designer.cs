@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.box = new System.Windows.Forms.PictureBox();
             this.startButton = new System.Windows.Forms.Button();
             this.snapButton = new System.Windows.Forms.Button();
             this.scoreLabel = new System.Windows.Forms.Label();
             this.highScoreLabel = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.gameOverLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.box)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,9 +44,9 @@
             // 
             this.box.BackColor = System.Drawing.Color.PapayaWhip;
             this.box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.box.Location = new System.Drawing.Point(14, 111);
+            this.box.Location = new System.Drawing.Point(12, 111);
             this.box.Name = "box";
-            this.box.Size = new System.Drawing.Size(1096, 534);
+            this.box.Size = new System.Drawing.Size(1115, 508);
             this.box.TabIndex = 0;
             this.box.TabStop = false;
             this.box.Paint += new System.Windows.Forms.PaintEventHandler(this.UpdatePictureBox);
@@ -97,18 +99,35 @@
             // 
             this.gameTimer.Tick += new System.EventHandler(this.GameTimer);
             // 
+            // gameOverLabel
+            // 
+            this.gameOverLabel.AutoSize = true;
+            this.gameOverLabel.BackColor = System.Drawing.Color.PapayaWhip;
+            this.gameOverLabel.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameOverLabel.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.gameOverLabel.Location = new System.Drawing.Point(519, 313);
+            this.gameOverLabel.Name = "gameOverLabel";
+            this.gameOverLabel.Size = new System.Drawing.Size(0, 33);
+            this.gameOverLabel.TabIndex = 3;
+            this.gameOverLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gameOverLabel.Click += new System.EventHandler(this.gameOverLabel_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1122, 657);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1139, 631);
+            this.Controls.Add(this.gameOverLabel);
             this.Controls.Add(this.highScoreLabel);
             this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.snapButton);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.box);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Snake Game";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
             ((System.ComponentModel.ISupportInitialize)(this.box)).EndInit();
@@ -125,6 +144,7 @@
         private System.Windows.Forms.Label scoreLabel;
         private System.Windows.Forms.Label highScoreLabel;
         private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.Label gameOverLabel;
     }
 }
 
