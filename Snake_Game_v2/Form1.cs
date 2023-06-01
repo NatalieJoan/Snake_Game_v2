@@ -27,14 +27,12 @@ namespace Snake_Game_v2
             InitializeComponent();
             new Settings();
         }
-
         private void StartGame(object sender, EventArgs e)
         {
             gameTimer.Interval = 100;
             currentInterval = 100;
             RestartGame();
         }
-
         private void TakeSnapShot(object sender, EventArgs e)
         {
             Label caption = new Label();
@@ -92,9 +90,7 @@ namespace Snake_Game_v2
                     Settings.Width,
                     Settings.Height
                 ));
-  
         }
-
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left && Settings.directions != "right")
@@ -218,17 +214,6 @@ namespace Snake_Game_v2
             }
             box.Invalidate();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gameOverLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void RestartGame()
         {
             maxWidth = box.Width / Settings.Width - 1;
@@ -282,6 +267,9 @@ namespace Snake_Game_v2
             gameTimer.Stop();
             startButton.Enabled = true;
             snapButton.Enabled = true;
+
+            gameOverLabel.Location = new Point(325, 220);
+            gameOverLabel.BackColor = Color.PapayaWhip;
             gameOverLabel.Text = "Game Over";
 
             if (scoreGame > highScore)
