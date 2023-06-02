@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
-using System.Diagnostics.Tracing;
 
 namespace Snake_Game_v2
 {
@@ -38,7 +37,8 @@ namespace Snake_Game_v2
             Label caption = new Label();
             caption.Text = "Score: " + scoreGame + "  Record: " + highScore;
             caption.Font = new Font("Ariel", 12, FontStyle.Bold);
-            caption.ForeColor = Color.DarkBlue;
+            caption.ForeColor = Color.DarkRed;
+            caption.BackColor = Color.BurlyWood;
             caption.AutoSize = false;
             caption.Width = box.Width;
             caption.Height = 40;
@@ -101,11 +101,11 @@ namespace Snake_Game_v2
             {
                 goRight = true;
             }
-            if (e.KeyCode == Keys.Up && Settings.directions != "up")
+            if (e.KeyCode == Keys.Up && Settings.directions != "down")
             {
                 goUp = true;
             }
-            if (e.KeyCode == Keys.Down && Settings.directions != "down")
+            if (e.KeyCode == Keys.Down && Settings.directions != "up")
             {
                 goDown = true;
             }
@@ -228,7 +228,7 @@ namespace Snake_Game_v2
             scoreGame = 0;
             scoreLabel.Text = "Score: " + scoreGame;
 
-            Circle head = new Circle { X = 10, Y = 5 };     // umiejscowanie glowy snake na pozycji (10,5)
+            Circle head = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };     // umiejscowanie glowy snejka w losowym miejscu
             Snake.Add(head);
 
             for (int i = 0; i < 10; i++)
@@ -253,7 +253,7 @@ namespace Snake_Game_v2
             Snake.Add(body);
             food = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
 
-            // proces przyspieszenia weza po kazdym kolejnym jedzeniu
+            // proces przyspieszenia snejka po kazdym kolejnym jedzeniu
             currentInterval -= 5;
 
             if (currentInterval < 40)
@@ -278,7 +278,7 @@ namespace Snake_Game_v2
                 highScoreLabel.Text = "Record: " + highScore;
                 highScoreLabel.ForeColor = Color.Maroon;
                 highScoreLabel.Font = new Font(highScoreLabel.Font, FontStyle.Bold);
-                highScoreLabel.TextAlign = ContentAlignment.MiddleCenter;
+                highScoreLabel.TextAlign = ContentAlignment.MiddleLeft;
             }
         }
     }
